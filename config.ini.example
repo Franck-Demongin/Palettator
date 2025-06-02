@@ -1,0 +1,17 @@
+################
+## config.ini ##
+################
+
+# Copy this file to config.ini and modify the values according to your needs.
+
+[palette]
+    palette_size = 9
+    square_x = 100
+    square_y = 100
+    columns = 3
+    title_size = 18
+    subtitle_size = 14
+    title_font = Ubuntu-B.ttf
+    subtitle_font = Lato-Regular.ttf
+    resize = True
+    save_path = output
