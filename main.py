@@ -34,9 +34,10 @@ config = {
         "columns": config_user.getint('palette', 'columns', fallback=3),
         "title_size": config_user.getint('palette', 'title_size', fallback=18),
         "subtitle_size": config_user.getint('palette', 'subtitle_size', fallback=14),
-        "title_font": config_user.get('palette', 'title_font', fallback="Ubuntu-B.ttf"),
+        "title_font": config_user.get('palette', 'title_font', fallback="Lato-Black.ttf"),
         "subtitle_font": config_user.get('palette', 'subtitle_font', fallback="Lato-Regular.ttf"),
         "resize": config_user.getboolean('palette', 'resize', fallback=True),
+        "clear_console": config_user.getboolean('palette', 'clear_console', fallback=True),
         "save_path": config_user.get('palette', 'save_path', fallback=os.path.join(BASEDIR, "output")),
     }
 }
@@ -449,9 +450,10 @@ def main():
                 else:
                     console.print("Please enter a valid path.", style="red")
             
-            console.clear()
-            print_header()
-            console.line()
+            if config["palette"]["clear_console"]:
+                console.clear()
+                print_header()
+                console.line()
             
             if action == 'help':
                 print_instructions()

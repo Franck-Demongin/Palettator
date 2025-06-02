@@ -14,4 +14,5 @@
     title_font = Ubuntu-B.ttf
     subtitle_font = Lato-Regular.ttf
     resize = True
+    clear_console = True
     save_path = output
