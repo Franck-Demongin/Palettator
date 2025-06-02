@@ -41,6 +41,18 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+**Linux**
+
+Palettator uses zenity, which is available by default on Ubuntu distributions.  
+To install it, follow this link: [zenity](https://doc.ubuntu-fr.org/zenity)
+
+**Windows**
+
+Display bugs may occur in the cmd.exe console.  
+Try switching the clear_console option to false. See **Config** section below.  
+
+You can also use a newer terminal such as Terminal, available from the Windows Store: [Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?ocid=webpdpshare)
+
 ## Generate palettes
 
 - Full path to the image.
@@ -93,6 +105,23 @@ Enter /l or /list: display the list of palettes.
 
 Enter /c or /config: display the configuration.  
 To change the default configuration, create (copy and rename the config.ini.example file to config.ini) or modify the config.ini file.
+
+The options available are:
+- palette_size : number of colors to extract. Default 9
+- square_x : width of color dots. Default 100
+- square_y : height of color dots. Default 100
+- columns : number of columns. Default 3
+- title_size : title font size. Default 18
+- subtitle_size : subtile font size. Default 14
+- title_font : title font. Default Lato-Black.ttf
+- subtitle_font : subtitle font. Default Lato-Regular.ttf
+- resize : Whether to resize the image before processing. Default True
+- clear_console : clear the console beetwen each screen. Default Trueclear_console : clear the console beetwen each screen. Default True
+- save_path : directory where palettes are saved. Default output
+- save_path : directory where palettes are saved. Default output
+
+The fonts are located in the directory fonts.  
+The generated palettes and their exported versions (.csv, .json, .gbl, or .aco) are saved in the default output directory.
 
 # Exit
 
